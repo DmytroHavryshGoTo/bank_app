@@ -1,4 +1,4 @@
-# Bank App
+# Bank App [![Build Status](https://app.travis-ci.com/DmytroHavryshGoTo/bank_app.svg?branch=main)](https://app.travis-ci.com/DmytroHavryshGoTo/bank_app)
 
 Simple banking app, that allows users to send money to each other from different cards(currency conversion supported)
 
