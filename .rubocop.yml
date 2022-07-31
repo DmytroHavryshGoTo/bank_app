@@ -1,0 +1,36 @@
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - "db/**/*"
+    - "bin/*"
+    - "config/**/*"
+    - "public/**/*"
+    - "spec/**/*"
+    - "test/**/*"
+    - "vendor/**/*"
+    - "spec/fixtures/**/*"
+    - "tmp/**/*"
+    - "node_modules/**/*"
+
+Style/Documentation:
+  Description: Document classes and non-namespace modules.
+  Enabled: false
+Metrics/AbcSize:
+  Description:
+    A calculated magnitude based on number of assignments, branches, and
+    conditions.
+  Enabled: false
+  Max: 15
+Layout/DotPosition:
+  Description: Checks the position of the dot in multi-line method calls.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains
+  Enabled: true
+  EnforcedStyle: trailing
+  SupportedStyles:
+    - leading
+    - trailing
+Metrics/MethodLength:
+  Max: 20
+Style/FrozenStringLiteralComment:
+  Enabled: false

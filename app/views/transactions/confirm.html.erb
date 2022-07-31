@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-6 mx-auto">
+
+    <h2>Enter verification code:</h1>
+
+    <%= form_for :transaction_verify, url: 'verify' do |form| %>
+      <%= form.text_field :code %>
+      <%= form.submit 'Submit', class: 'btn btn-success pt-4'  %>
+    <% end  %>   
+
+  </div>
+</div>

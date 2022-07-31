@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @account.balance_currency %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @account.user.full_name %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @account.formatted_balance %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @account.formatted_number %>
+</p>
+
+<%= link_to 'Back', accounts_path, class: 'btn btn-secondary' %>
+
+<br>
+<br>
+<br>
+
+<h3>Transactions history:</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">From</th>
+      <th scope="col">To</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @account.transactions.each do |transaction| %>
+      <tr>
+        <th scope="row">1</th>
+        <td><%= transaction.from_account.hidden_number %></td>
+        <td><%= transaction.to_account.hidden_number %></td>
+        <% if transaction.to_account == @account %>
+          <td class="text-success">+<%= transaction.formatted_amount %></td>
+        <% else %>
+          <td class="text-danger">-<%= transaction.formatted_amount %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

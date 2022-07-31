@@ -1,0 +1,42 @@
+// Place all the styles related to the Accounts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.cards {
+  max-width: 600px;
+}
+
+.cards .atm {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.cards .visa {
+  width: 50px;
+  height: 20px;
+  object-fit: fill;
+}
+
+.cards .master {
+  width: 50px;
+  height: 50px;
+  object-fit: fill;
+}
+
+.debit-card {
+  width: 100%;
+  height: 180px;
+  padding: 20px;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #0000001a;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.debit-card p {
+  font-size: 16px;
+}

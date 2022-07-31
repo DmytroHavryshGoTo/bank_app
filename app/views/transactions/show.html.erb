@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-6 mx-auto">
+
+    <p>
+      <strong>To User:</strong>
+      <%= User.find(@transaction.to_account.user_id).full_name %>
+    </p>
+
+    <p>
+      <strong>To Account:</strong>
+      <%= @transaction.to_account.hidden_number %>
+    </p>
+
+    <p>
+      <strong>Amount:</strong>
+      <%= @transaction.formatted_amount %>
+    </p>
+
+    <p>
+      <%= link_to 'Confirm', transaction_confirm_path(@transaction), method: :post, class: 'btn btn-success' %>
+    </p>
+
+    <br>
+
+    <%= link_to 'Back', new_transaction_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

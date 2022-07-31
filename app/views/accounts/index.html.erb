@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-lg-6 mx-auto">
+
+    <h1>Accounts</h1>
+
+    <div class="cards">
+      <% @accounts.each do |account| %>
+        <%= link_to account_path(account) do %>
+          <%= render 'card', card: account %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <br>
+
+    <%= link_to 'New Account', new_account_path, class: 'btn btn-primary' %>
+
+  </div>
+</div>

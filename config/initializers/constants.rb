@@ -1,0 +1,1 @@
+SUPPORTED_CURRENCIES = %w[EUR USD].freeze
